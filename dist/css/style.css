@@ -7,9 +7,15 @@
 }
 .main .container {
   display: grid;
+  gap: 1rem;
   width: 80%;
   margin-inline: auto;
   padding: 81px 0;
+}
+@media (min-width: 769px) and (max-width: 50em) {
+  .main .container {
+    gap: 2rem;
+  }
 }
 @media (max-width: 599px) {
   .main .container {
@@ -115,6 +121,99 @@
 }
 .main .container .profile__card .time p.active {
   color: #fff;
+}
+.main .container .cards {
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .main .container .cards {
+    grid-template-columns: 1fr;
+  }
+}
+@media (min-width: 769px) and (max-width: 50em) {
+  .main .container .cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+.main .container .cards .card__container {
+  height: 160px;
+  background-color: hsl(15deg, 100%, 70%);
+  border-radius: 15px;
+  position: relative;
+}
+.main .container .cards .card__container .icon-work {
+  position: absolute;
+  right: 0;
+}
+.main .container .cards .card__container .main__card {
+  height: 122px;
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 15px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 29px 24px;
+}
+.main .container .cards .card__container .main__card .left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 6px;
+}
+.main .container .cards .card__container .main__card .left h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+@media (max-width: 500px) {
+  .main .container .cards .card__container .main__card .left h3 {
+    font-size: 1rem;
+  }
+}
+.main .container .cards .card__container .main__card .left .time p {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+@media (max-width: 500px) {
+  .main .container .cards .card__container .main__card .left .time p {
+    font-size: 1.3rem;
+  }
+}
+.main .container .cards .card__container .main__card .right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 20px;
+}
+.main .container .cards .card__container .main__card .right .date p {
+  color: hsl(236deg, 100%, 87%);
+  font-size: 0.9rem;
+}
+@media (max-width: 500px) {
+  .main .container .cards .card__container .main__card .right .date p {
+    font-size: 0.75rem;
+  }
+}
+.main .container .cards .card__2 .card__container {
+  background-color: hsl(195deg, 74%, 62%);
+}
+.main .container .cards .card__3 .card__container {
+  background-color: hsl(348deg, 100%, 68%);
+}
+.main .container .cards .card__4 .card__container {
+  background-color: hsl(145deg, 58%, 55%);
+}
+.main .container .cards .card__5 .card__container {
+  background-color: hsl(264deg, 64%, 52%);
+}
+.main .container .cards .card__6 .card__container {
+  background-color: hsl(43deg, 84%, 65%);
 }
 
 * {

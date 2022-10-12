@@ -8,9 +8,14 @@
 
     .container {
         display: grid;
+        gap: 1rem;
         width: 80%;
         margin-inline: auto;
         padding: 81px 0;
+
+        @include large {
+            gap: 2rem;
+        }
         
         @include mobile {
             grid-template-columns: 1fr;
@@ -111,6 +116,138 @@
                     &.active {
                         color: $white;
                     }
+                }
+            }
+        }
+
+        .cards {
+            display: grid;
+            gap: 1rem;
+            
+            @include tablet {
+                grid-template-columns: 1fr;
+            }
+
+            @include large {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .card {
+
+                &__container {
+                    height: 160px;
+                    background-color: $Light-red-work;
+                    border-radius: 15px;
+                    position: relative;
+
+                    .icon-work {
+                        position: absolute;
+                        right: 0;
+                    }
+
+                    .main__card {
+                        height: 122px;
+                        background-color: $Dark-blue;
+                        border-radius: 15px;
+                        position: absolute;
+                        width: 100%;
+                        bottom: 0;
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 29px 24px;
+
+                        .left {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-start;
+                            justify-content: center;
+                            gap: 6px;
+
+                            h3 {
+                                color: $white;
+                                font-size: 1.1rem;
+                                font-weight: 500;
+
+                                @include small {
+                                    font-size: 1rem;
+                                }
+                            }
+
+                            .time {
+
+                                p {
+                                    color: $white;
+                                    font-size: 1.6rem;
+                                    font-weight: 300;
+
+                                    @include small {
+                                        font-size: 1.3rem;
+                                    }
+                                }
+                            }
+                        }
+
+                        .right {
+                            display: flex;
+                            flex-direction: column;
+                            align-items: flex-end;
+                            justify-content: center;
+                            gap: 20px;
+
+                            .icon {
+
+                            }
+
+                            .date {
+
+                                p {
+                                    color: $Pale-Blue;
+                                    font-size: .9rem;
+
+                                    @include small {
+                                        font-size: .75rem;
+                                    }
+                                }
+                            }
+                        }
+                        
+                        
+                    }
+                }
+            }
+
+            .card__2 {
+
+                .card__container {
+                    background-color: $Soft-blue;
+                }
+            }
+
+            .card__3 {
+
+                .card__container {
+                    background-color: $Light-red;
+                }
+            }
+
+            .card__4 {
+
+                .card__container {
+                    background-color: $Lime-green;
+                }
+            }
+
+            .card__5 {
+
+                .card__container {
+                    background-color: $Violet;
+                }
+            }
+
+            .card__6 {
+
+                .card__container {
+                    background-color: $Soft-orange;
                 }
             }
         }
