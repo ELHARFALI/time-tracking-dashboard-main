@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+@media (max-width: 599px) {
+  .main {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+.main .container {
+  display: grid;
+  width: 80%;
+  margin-inline: auto;
+  padding: 81px 0;
+}
+@media (max-width: 599px) {
+  .main .container {
+    grid-template-columns: 1fr;
+    padding: 81px 25px;
+    width: 100%;
+  }
+}
+.main .container .profile__card {
+  background-color: hsl(235deg, 46%, 20%);
+  border-radius: 15px;
+}
+.main .container .profile__card .profile {
+  background-color: hsl(246deg, 80%, 60%);
+  border-radius: 15px;
+  display: flex;
+  padding: 35px 10px;
+}
+@media (min-width: 600px) and (max-width: 768px) {
+  .main .container .profile__card .profile {
+    padding: 25px 8px;
+  }
+}
+@media (max-width: 500px) {
+  .main .container .profile__card .profile {
+    padding: 20px 6px;
+  }
+}
+.main .container .profile__card .profile .img {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main .container .profile__card .profile .img img {
+  max-width: 45%;
+}
+@media (max-width: 500px) {
+  .main .container .profile__card .profile .img img {
+    max-width: 50%;
+  }
+}
+.main .container .profile__card .profile .content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .main .container .profile__card .profile .content {
+    gap: 7px;
+  }
+}
+.main .container .profile__card .profile .content p {
+  color: hsl(236deg, 100%, 87%);
+}
+@media (max-width: 500px) {
+  .main .container .profile__card .profile .content p {
+    font-size: 0.8rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .main .container .profile__card .profile .content p {
+    font-size: 1rem;
+  }
+}
+.main .container .profile__card .profile .content h2 {
+  color: #fff;
+  font-weight: 300;
+}
+@media (max-width: 500px) {
+  .main .container .profile__card .profile .content h2 {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .main .container .profile__card .profile .content h2 {
+    font-size: 1.6rem;
+  }
+}
+.main .container .profile__card .time {
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 22px;
+}
+@media (max-width: 500px) {
+  .main .container .profile__card .time {
+    padding: 16px;
+  }
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .main .container .profile__card .time {
+    padding: 30px 24px;
+  }
+}
+.main .container .profile__card .time p {
+  color: hsl(236deg, 100%, 87%);
+}
+@media (min-width: 600px) and (max-width: 991px) {
+  .main .container .profile__card .time p {
+    font-size: 1.2rem;
+  }
+}
+.main .container .profile__card .time p.active {
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+  background-color: hsl(226deg, 43%, 10%);
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}/*# sourceMappingURL=style.css.map */

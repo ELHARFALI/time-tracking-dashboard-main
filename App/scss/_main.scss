@@ -1,0 +1,118 @@
+
+.main {
+
+    @include mobile {
+        width: 100%;
+        min-height: 100vh;
+    }
+
+    .container {
+        display: grid;
+        width: 80%;
+        margin-inline: auto;
+        padding: 81px 0;
+        
+        @include mobile {
+            grid-template-columns: 1fr;
+            padding: 81px 25px;
+            width: 100%;
+        }
+        
+        .profile__card {
+            background-color: $Dark-blue;
+            border-radius: 15px;
+            
+            .profile {
+                background-color: $Blue;
+                border-radius: 15px;
+                display: flex;
+                padding: 35px 10px;
+
+                @include tablet {
+                    padding: 25px 8px;
+                }
+
+                @include small {
+                    padding: 20px 6px;
+                }
+
+                .img {
+                    width: 40%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+
+                    img {
+                        max-width: 45%;
+
+                        @include small {
+                            max-width: 50%;
+                        }
+                    }
+                }
+
+                .content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    gap: 3px;
+
+                    @include tablet-plus {
+                        gap: 7px;
+                    }
+                    
+                    p {
+                        color: $Pale-Blue;
+
+                        @include small {
+                            font-size: .8rem;
+                        }
+
+                        @include tablet-plus {
+                            font-size: 1rem;
+                        }
+                    }
+
+                    h2 {
+                        color: #fff;
+                        font-weight: 300;
+
+                        @include small {
+                            font-size: 1.1rem;
+                        }
+
+                        @include tablet-plus {
+                            font-size: 1.6rem;
+                        }
+                    }
+                }
+            }
+
+            .time {
+                display: flex;
+                justify-content: space-between;
+                padding: 27px 22px;
+                
+                @include small {
+                    padding: 16px;
+                }
+
+                @include tablet-plus {
+                    padding: 30px 24px;
+                }
+
+                p {
+                        color: $Pale-Blue;
+
+                        @include tablet-plus {
+                            font-size: 1.2rem;
+                        }
+
+                    &.active {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
